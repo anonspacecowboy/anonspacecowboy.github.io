@@ -3,7 +3,7 @@ div.navbar{
     top: 0;
     left: 0;
     right: 0;
-    background-color: #EDEDED;
+    background-color: #303030;
     overflow: auto;
 }
 
@@ -14,14 +14,15 @@ div.navbar_logo{
 
 div.navbar_logo a{
     text-decoration: none;
+    color: white;
 }
 
 div.navbar_logo a:visited{
-    color: black;
+    color: E8E8E8;
 }
 
 div.navbar_logo a:hover{
-    color: #666;
+    color: white;
 }
 
 div.navbar_menu{
@@ -39,13 +40,17 @@ div.navbar_menu ul li{
 }
 
 div.navbar_menu ul li a{
+    font-weight: bold;
     padding: 2px 10px;
     display: inline-block;
-    color: #333;
+    color: white;
     text-decoration: none;
-    border-bottom: 3px solid #EDEDED;
 }
 
 div.navbar_menu ul li a:hover{
-    text-decoration: underline;
+    border-bottom: 3px solid #EDEDED;
+}
+
+span.divisor {
+    color: #0372B5;
 }
