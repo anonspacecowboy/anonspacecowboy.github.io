@@ -1,0 +1,65 @@
+<html>
+
+<head><title>Leonardo(aracy) ;P</title>
+    <style>
+        canvas {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -300;
+            margin-left: -400;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas height="600" width="800" id="pong_canvas">Não suportado pelo browser</canvas>
+    <script>
+        var canvas = document.getElementById("pong_canvas");
+        var ctx = canvas.getContext("2d");
+        var ball = {
+            width: 16,
+            height: 16,
+            x: canvas.width/2 - 8,
+            y: canvas.height/2 - 8,
+            speed: 50,
+            speed_rate: 0,
+        };
+
+        var bar1 = {
+            width: 16,
+            height: 100,
+            x: 10,
+            y: canvas.height/2 - 25,
+            score: 0,
+            speed: 15,
+        };
+
+        var bar2 = {
+            width: 16,
+            height: 100,
+            x: canvas.width - 26,
+            y: canvas.height/2 - 25,
+            score: 0,
+            speed: 15,
+        };
+
+        function draw(){
+            ctx.fillStyle = "white";
+            ctx.fillRect(bar1.x, bar1.y, bar1.width, bar1.height);
+            ctx.fillRect(bar2.x, bar2.y, bar2.width, bar2.height);
+            ctx.fillRect(ball.x, ball.y, ball.width, ball.height);
+
+            ctx.font = "20px Arial";
+            ctx.fillText("Player 1: "+ bar1.score, 50 ,20);
+            ctx.fillText("Player 2: "+ bar2.score, canvas.width - 150 ,20);
+        }
+
+        draw();
+
+    </script>
+</body>
+
+</html>

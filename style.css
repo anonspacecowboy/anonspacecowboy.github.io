@@ -1,5 +1,12 @@
-div.navbar{
+div.wrapper{
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+div.navbar{
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -51,6 +58,12 @@ div.navbar_menu ul li a:hover{
     border-bottom: 3px solid #EDEDED;
 }
 
-span.divisor {
+span.navbar_divisor {
     color: #0372B5;
+}
+
+div.content {
+    position: relative;
+    float: none;
+    background-color: red;
 }
