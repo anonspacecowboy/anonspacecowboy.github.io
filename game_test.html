@@ -76,11 +76,11 @@
         function moveBall(){
             if ((ball.y+ball.height >= bar1.y) && (ball.y <= bar1.y+bar1.height) && (ball.x <= bar1.x + bar1.width)){
                 ball.dirX = 1;
-                ball.speed_rate = 0.5;
+                ball.speed_rate += 0.3;
             }
             if ((ball.y+ball.height >= bar2.y) && (ball.y <= bar2.y+bar2.height) && (ball.x + ball.width >= bar2.x)){
                 ball.dirX = -1;
-                ball.speed_rate = 0.5;
+                ball.speed_rate += 0.3;
             }
             if(ball.y + ball.height >= canvas.height){
                 ball.dirY = -1;
