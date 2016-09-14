@@ -85,6 +85,11 @@ div.content {
 	margin-left: -50px;
 }
 
+#start_button:hover{
+	border-color: green;
+	color: green;
+}
+
 #game_layer{
 	background-color: rgba(239,239,239,0.8);
 	margin-top: 75px;

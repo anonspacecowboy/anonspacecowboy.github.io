@@ -147,19 +147,24 @@
             ctx.fillText("Player 2: "+ bar2.score, canvas.width - 150 ,20);
         }
 
+		
 		document.getElementById("start_button").addEventListener("click", dummyStartFunction);
 		
+		//pause code
 		document.addEventListener("keydown", function(e){
 			if(e.keyCode == 80){
 				clearInterval(interval_id);
 				start = false;
+				document.getElementById("game_layer").style.backgroundColor="rgba(239,239,239,0.8)";
 			}
         }, false);
 		
+		//start code
 		function dummyStartFunction(){
 			if(start == false){
 				interval_id = setInterval(draw, 10);
 				start = true;
+				document.getElementById("game_layer").style.backgroundColor="transparent";
 			}
 		}
 
