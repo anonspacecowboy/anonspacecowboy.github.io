@@ -63,11 +63,7 @@ span.navbar_divisor {
 }
 
 div.content {
-    position: relative;
-    float: none;
-<<<<<<< HEAD
-=======
-    background-color: red;
+
 }
 
 #start_button{
@@ -90,11 +86,12 @@ div.content {
 #start_button:hover{
 	border-color: green;
 	color: green;
+	cursor: pointer;
 }
 
 #game_layer{
-	background-color: rgba(239,239,239,0.8);
-	margin-top: 75px;
+	background-color: rgba(239,239,239,0.9);
+	margin-top: 50px;
 	z-index: 10;
 	width: 800px;
 	height: 600px;
@@ -102,5 +99,23 @@ div.content {
 }
 
 div.game_container {
->>>>>>> showcase_js
+}
+
+#hint_button{
+	text-align: center;
+	padding: 10px;
+	background-color: rgba(3, 114, 181,0.8);
+	width: 50px;
+	position: absolute;
+	top: 93%;
+	left: 1%;
+	border-radius: 5px;
+	font-weight: bold;
+	
+}
+
+#hint_button:hover{
+	background-color: rgba(3, 114, 181,0.7);
+	cursor: pointer;
+	
 }
