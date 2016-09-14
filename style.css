@@ -65,4 +65,42 @@ span.navbar_divisor {
 div.content {
     position: relative;
     float: none;
+<<<<<<< HEAD
+=======
+    background-color: red;
+}
+
+#start_button{
+	text-align: center;
+	line-height: 100px;
+	border-color: black;
+	border-style: solid;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	font-weight: bold;
+	position: absolute;
+	z-index: 20;
+	left: 50%;
+	top: 50%;
+	margin-top: -50px;
+	margin-left: -50px;
+}
+
+#start_button:hover{
+	border-color: green;
+	color: green;
+}
+
+#game_layer{
+	background-color: rgba(239,239,239,0.8);
+	margin-top: 75px;
+	z-index: 10;
+	width: 800px;
+	height: 600px;
+	position: relative;
+}
+
+div.game_container {
+>>>>>>> showcase_js
 }
