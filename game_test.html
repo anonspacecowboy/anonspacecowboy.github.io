@@ -156,6 +156,7 @@
 				clearInterval(interval_id);
 				start = false;
 				document.getElementById("game_layer").style.backgroundColor="rgba(239,239,239,0.8)";
+				document.getElementById("start_button").style.display="block";
 			}
         }, false);
 		
@@ -165,6 +166,7 @@
 				interval_id = setInterval(draw, 10);
 				start = true;
 				document.getElementById("game_layer").style.backgroundColor="transparent";
+				document.getElementById("start_button").style.display="none";
 			}
 		}
 
