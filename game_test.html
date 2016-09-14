@@ -11,12 +11,18 @@
             background-color: black;
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-
-    <canvas height="600" width="800" id="pong_canvas">Não suportado pelo browser</canvas>
+	<div id="start_button"> Start
+	</div>
+    <div id="game_layer">
+		<canvas height="600" width="800" id="pong_canvas">Não suportado pelo browser</canvas>
+    </div>
     <script>
+		var start = false;
+		var interval_id;
         var canvas = document.getElementById("pong_canvas");
         var ctx = canvas.getContext("2d");
         var keys = {};
@@ -25,7 +31,7 @@
             height: 16,
             x: canvas.width/2 - 8,
             y: canvas.height/2 - 8,
-            speed: 5,
+            speed: 2,
             dirX: -1,
             dirY: 1,
             speed_rate: 0,
@@ -139,8 +145,21 @@
             ctx.fillText("Player 2: "+ bar2.score, canvas.width - 150 ,20);
         }
 
-        setInterval(draw, 10);
-
+		document.getElementById("start_button").addEventListener("click", dummyStartFunction);
+		
+		document.addEventListener("keydown", function(e){
+			if(e.keyCode == 80){
+				clearInterval(interval_id);
+				start = false;
+			}
+        }, false);
+		
+		function dummyStartFunction(){
+			if(start == false){
+				interval_id = setInterval(draw, 10);
+				start = true;
+			}
+		}
 
     </script>
 </body>
