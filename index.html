@@ -21,15 +21,15 @@
             <div class="navbar_logo"><h3><a href="https://anonspacecowboy.github.io/">LEONARDO ~/HOME/</a></h3></div>
             <div class="navbar_menu">
                 <ul class="menu_items">
-                    <li><a href="#">HOMEPAGE</a> <span class="navbar_divisor">--</span> </li>
-                    <li><a href="#">PORTFOLIO/PROJECTS</a> <span class="navbar_divisor">--</span> </li>
-                    <li><a href="#">PLAYGROUND</a> <span class="navbar_divisor">--</span> </li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#" id="id_homepage">HOMEPAGE</a> <span class="navbar_divisor">--</span> </li>
+                    <li><a href="#" id="id_portfolio">PORTFOLIO/PROJECTS</a> <span class="navbar_divisor">--</span> </li>
+                    <li><a href="https://github.com/anonspacecowboy">PLAYGROUND</a> <span class="navbar_divisor">--</span> </li>
+                    <li><a href="#" id="id_contact">CONTACT</a></li>
                 </ul>
             </div>
         </div>
-	<div class="content">
-		<div class="game_container" align="center">
+	<div class="content" id="homepage_container">
+		<div class="game_container" id="game_container" align="center">
 			<div id="start_button"> Start
 			</div>
 			
@@ -197,9 +197,69 @@
 		<span><b>Esc to leave help</b></span>
     </dialog>
     
+	<div id="portfolio_container" style="display: none;">
+		<h1><span class="navbar_divisor">--</span><u>SHOWCASE</u><span class="navbar_divisor">--</span></h1>
+		<hr />
+	</div>
+	
+	<div id="contact_container" style="display: none;">
+		<h1><span class="navbar_divisor">--</span><u>CONTACT</u><span class="navbar_divisor">--</span></h1>
+		<hr />
+		<div class="contact_form">
+			<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdFDAaRgIdnb4vwdCVdZJC54AkJveBfn0EsiGxrBTwGhXpkLw/formResponse" target="hidden_iframe" onsubmit="submitted=true">
+			  <span class="form_desc"><u>Your name</u></span> <br /><input class="email_form" type="text" name="entry.141338849" id="entry.141338849" placeholder="Your name"> <br /><br />
+			  <span class="form_desc"><u>Your email</u></span> <br /><input class="email_form" type="email" name="entry.1503486752" id="entry.1503486752" placeholder="Your email"> <br /><br />
+			  <span class="form_desc"><u>Your message</u></span><br /> <textarea class="message_form" name="entry.1158196175" id="entry.1158196175" placeholder="Your message"></textarea> <br /><br />
+			  <input type="submit" value="Submit" class="submit_button">
+			</form>
+			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+		</div>
+		<br />
+		<br />
+		<span id="submit_success" class="success_message" style="display: none;">Your submission has been processed...</span>
+
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript">var submitted=false;</script>
+	<script type="text/javascript">
+		$('#gform').on('submit', function(e) {
+		
+		document.getElementById("entry.141338849").value= "";
+		document.getElementById("entry.1503486752").value= "";
+		document.getElementById("entry.1158196175").value= "";
+		
+		
+		$('#gform *').fadeOut(1000);
+		$('#submit_success').fadeIn(500);
+		$('#gform *').fadeIn(1000);
+		});
+	</script>
+    
     <script>
 		document.getElementById("hint_button").addEventListener("click", function(){
 			document.getElementById("modal_help").showModal();
+		});
+		
+		document.getElementById("id_homepage").addEventListener("click", function(){
+			document.getElementById("homepage_container").style.display="block";
+			document.getElementById("portfolio_container").style.display="none";
+			document.getElementById("contact_container").style.display="none";
+		});
+		
+		document.getElementById("id_portfolio").addEventListener("click", function(){			
+			document.getElementById("homepage_container").style.display="none";
+			document.getElementById("portfolio_container").style.display="block";
+			document.getElementById("contact_container").style.display="none";
+		});
+		
+		document.getElementById("id_contact").addEventListener("click", function(){			
+			document.getElementById("homepage_container").style.display="none";
+			document.getElementById("portfolio_container").style.display="none";
+			document.getElementById("contact_container").style.display="block";
+			$('#gform *').fadeIn(200);
+			$('#submit_success').fadeOut(200);
+			
 		});
     </script>
 </body>
