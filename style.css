@@ -111,13 +111,18 @@ div.game_container {
 	left: 1%;
 	border-radius: 5px;
 	font-weight: bold;
-	
+
 }
 
 #hint_button:hover{
 	background-color: rgba(3, 114, 181,0.7);
 	cursor: pointer;
-	
+
+}
+
+#homepage_container {
+    margin-top: 100px;
+    text-align: center;
 }
 
 #portfolio_container {
@@ -128,61 +133,4 @@ div.game_container {
 #contact_container {
 	margin-top: 100px;
 	text-align: center;
-}
-
-.contact_form {
-	position: relative;
-	margin-top: 25px;
-	padding-top: 20px;
-	margin-left: 25%;
-	margin-right: 25%;
-	border-style: groove;
-	border-color: #0372B5;
-}
-
-.email_form{
-	border-style: groove;
-	width: 200px;
-}
-.email_form:focus {
-	border-width: 2px;
-	border-color: #0372B5;
-	
-}
-
-.message_form{
-	border-style: groove;
-	width: 400px;
-	height: 50px;
-}
-
-.message_form:focus{
-	border-width: 2px;
-	border-color: #0372B5;
-}
-
-.form_desc{
-	border-style: solid;
-	display: inline-block;
-	width: 196px;
-}
-
-.success_message{
-	padding-left: 50px;
-	padding-right: 50px;
-	background-color: #EDFCED;
-	border-style: groove;
-	border-color: #64992E;
-}
-
-.submit_button{
-	background-color: white;
-	border-style: groove;
-	border-width: 2px;
-	border-color: #0372B5;
-}
-
-.submit_button:hover{
-	background-color: rgba(3, 114, 181,0.7);
-	cursor: pointer;
 }

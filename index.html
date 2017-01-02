@@ -1,270 +1,74 @@
 <html>
 
-<head><title>Leonardo(aracy) ;P</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="js/phaser.min.js"></script>
-    <style>
-        canvas {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-top: -270;
-            margin-left: -400;
-            background-color: white;
-        }
-    </style>
-</head>
+    <head><title>Leonardo(aracy) ;P</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="js/phaser.min.js"></script>
 
-<body>
-    <div class=wrapper>
-        <div class="navbar">
-            <div class="navbar_logo"><h3><a href="https://anonspacecowboy.github.io/">LEONARDO ~/HOME/</a></h3></div>
-            <div class="navbar_menu">
-                <ul class="menu_items">
-                    <li><a href="#" id="id_homepage">HOMEPAGE</a> <span class="navbar_divisor">--</span> </li>
-                    <li><a href="#" id="id_portfolio">PORTFOLIO/PROJECTS</a> <span class="navbar_divisor">--</span> </li>
-                    <li><a href="https://github.com/anonspacecowboy">PLAYGROUND</a> <span class="navbar_divisor">--</span> </li>
-                    <li><a href="#" id="id_contact">CONTACT</a></li>
-                </ul>
+    <body>
+        <div class=wrapper>
+
+            <!-- navbar begin -->
+            <div class="navbar">
+                <div class="navbar_logo"><h3><a href="https://aracytopterm.github.io/">LEONARDO ~/HOME/</a></h3></div>
+                <div class="navbar_menu">
+                    <ul class="menu_items">
+                        <li><a href="https://aracytopterm.github.io/" id="id_homepage">HOMEPAGE</a> <span class="navbar_divisor">--</span> </li>
+                        <li><a href="#" id="id_portfolio">PORTFOLIO/PROJECTS</a> <span class="navbar_divisor">--</span> </li>
+                        <li><a href="https://github.com/aracytopterm?tab=repositories">PLAYGROUND</a> <span class="navbar_divisor">--</span> </li>
+                        <li><a href="#" id="id_contact">CONTACT</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-	<div class="content" id="homepage_container">
-		<div class="game_container" id="game_container" align="center">
-			<div id="start_button"> Start
-			</div>
-			
-			<div id="game_layer"></div>
-			<canvas height="600" width="800" id="pong_canvas">Não suportado pelo browser</canvas>
-		</div>
-		<script>
-			var start = false;
-			var interval_id;
-			var canvas = document.getElementById("pong_canvas");
-			var ctx = canvas.getContext("2d");
-			var keys = {};
-			var ball = {
-				width: 16,
-				height: 16,
-				x: canvas.width/2 - 8,
-				y: canvas.height/2 - 8,
-				speed: 2,
-				dirX: -1,
-				dirY: 1,
-				speed_rate: 0,
-			};
+            <!-- navbar end-->
 
-			var bar1 = {
-				width: 16,
-				height: 100,
-				x: 10,
-				y: canvas.height/2 - 25,
-				score: 0,
-				speed: 15,
-			};
+        <!-- homepage container begin-->
+    	<div class="content" id="homepage_container">
+            <h1><span class="navbar_divisor">--</span><u>HOMEPAGE</u><span class="navbar_divisor">--</span></h1>
+    		<hr />
+    	</div>
+        <!-- homepage container end-->
 
-			var bar2 = {
-				width: 16,
-				height: 100,
-				x: canvas.width - 26,
-				y: canvas.height/2 - 25,
-				score: 0,
-				speed: 15,
-			};
+        <!-- portfolio container begin -->
+    	<div id="portfolio_container" style="display: none;">
+    		<h1><span class="navbar_divisor">--</span><u>SHOWCASE</u><span class="navbar_divisor">--</span></h1>
+    		<hr />
+    	</div>
+        <!-- portfolio container end -->
 
-			document.addEventListener("keydown", function(e){
-				keys[e.keyCode] = true;
-			}, false);
+        <!-- contact container begin -->
+    	<div id="contact_container" style="display: none;">
+    		<h1><span class="navbar_divisor">--</span><u>CONTACT</u><span class="navbar_divisor">--</span></h1>
+    		<hr />
+    	</div>
+        <!-- contact container end -->
 
-			document.addEventListener("keyup", function(e){
-				delete keys[e.keyCode];
-			}, false);
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-			function moveBar(){
-				if ((87 in keys) && (bar1.y > 0)){
-					bar1.y -= bar1.speed;
-				}
-				if ((83 in keys) && (bar1.y < canvas.height - bar1.height)){
-					bar1.y += bar1.speed;
-				}
+        <script>
+    		document.getElementById("id_homepage").addEventListener("click", function(){
+    			document.getElementById("homepage_container").style.display="block";
+    			document.getElementById("portfolio_container").style.display="none";
+    			document.getElementById("contact_container").style.display="none";
+    		});
 
-				if ((38 in keys) && (bar2.y > 0)){
-					bar2.y -= bar2.speed;
-				}
-				if ((40 in keys) && (bar2.y < canvas.height - bar2.height)){
-					bar2.y += bar2.speed;
-				}
-			}
+    		document.getElementById("id_portfolio").addEventListener("click", function(){
+    			document.getElementById("homepage_container").style.display="none";
+    			document.getElementById("portfolio_container").style.display="block";
+    			document.getElementById("contact_container").style.display="none";
+    		});
 
-			function moveBall(){
-				if ((ball.y+ball.height >= bar1.y) && (ball.y <= bar1.y+bar1.height) && (ball.x <= bar1.x + bar1.width)){
-					ball.dirX = 1;
-					ball.speed_rate += 0.3;
-				}
-				if ((ball.y+ball.height >= bar2.y) && (ball.y <= bar2.y+bar2.height) && (ball.x + ball.width >= bar2.x)){
-					ball.dirX = -1;
-					ball.speed_rate += 0.3;
-				}
-				if(ball.y + ball.height >= canvas.height){
-					ball.dirY = -1;
-				}
-				if(ball.y <= 0){
-					ball.dirY = 1;
-				}
+    		document.getElementById("id_contact").addEventListener("click", function(){
+    			document.getElementById("homepage_container").style.display="none";
+    			document.getElementById("portfolio_container").style.display="none";
+    			document.getElementById("contact_container").style.display="block";
+    			$('#gform *').fadeIn(200);
+    			$('#submit_success').fadeOut(200);
 
-				ball.x += (ball.speed + ball.speed_rate) * ball.dirX;
-				ball.y += (ball.speed + ball.speed_rate) * ball.dirY;
+    		});
+        </script>
+    </body>
 
-			}
-
-			function score(){
-				if(ball.x <= 0) {
-					bar2.score+=1;
-
-					ball.x = canvas.width/2 - 8;
-					ball.y = canvas.height/2 - 8;
-					ball.speed_rate = 0;
-
-					bar1.x = 10;
-					bar1.y = canvas.height/2 - 25;
-					bar2.x = canvas.width - 26;
-					bar2.y = canvas.height/2 - 25;
-
-				}
-				if(ball.x+ball.width >= canvas.width) {
-					bar1.score+=1;
-
-					ball.x = canvas.width/2 - 8;
-					ball.y = canvas.height/2 - 8;
-					ball.speed_rate = 0;
-
-					bar1.x = 10;
-					bar1.y = canvas.height/2 - 25;
-					bar2.x = canvas.width - 26;
-					bar2.y = canvas.height/2 - 25;
-				}
-
-			}
-
-
-			function draw(){
-				ctx.clearRect(0,0, canvas.width, canvas.height);
-				moveBar();
-				moveBall();
-				score();
-				ctx.fillStyle = "black";
-				ctx.fillRect(bar1.x, bar1.y, bar1.width, bar1.height);
-				ctx.fillRect(bar2.x, bar2.y, bar2.width, bar2.height);
-				ctx.fillRect(ball.x, ball.y, ball.width, ball.height);
-
-				ctx.font = "20px Arial";
-				ctx.fillText("Player 1: "+ bar1.score, 50 ,20);
-				ctx.fillText("Player 2: "+ bar2.score, canvas.width - 150 ,20);
-			}
-
-			
-			document.getElementById("start_button").addEventListener("click", dummyStartFunction);
-			
-			//pause code
-			document.addEventListener("keydown", function(e){
-				if(e.keyCode == 80){
-					clearInterval(interval_id);
-					start = false;
-					document.getElementById("game_layer").style.backgroundColor="rgba(239,239,239,0.8)";
-					document.getElementById("start_button").style.display="block";
-					document.getElementById("pong_canvas").style.border="none";
-				}
-			}, false);
-			
-			//start code
-			function dummyStartFunction(){
-				if(start == false){
-					interval_id = setInterval(draw, 10);
-					start = true;
-					document.getElementById("game_layer").style.backgroundColor="transparent";
-					document.getElementById("start_button").style.display="none";
-					document.getElementById("pong_canvas").style.border="solid";
-				}
-			}
-
-			</script>
-			<div id="hint_button">Hint</div>
-		</div>
-    </div>
-    <dialog id="modal_help">
-		<span><b>Player 1:</b> </span>W to go up, S to go down<br />
-		<span><b>Player 2:</b> </span>Up to go up, Down to go down<br/>
-		<span><b>P to pause game</b></span><br/>
-		<span><b>Esc to leave help</b></span>
-    </dialog>
-    
-	<div id="portfolio_container" style="display: none;">
-		<h1><span class="navbar_divisor">--</span><u>SHOWCASE</u><span class="navbar_divisor">--</span></h1>
-		<hr />
-	</div>
-	
-	<div id="contact_container" style="display: none;">
-		<h1><span class="navbar_divisor">--</span><u>CONTACT</u><span class="navbar_divisor">--</span></h1>
-		<hr />
-		<div class="contact_form">
-			<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdFDAaRgIdnb4vwdCVdZJC54AkJveBfn0EsiGxrBTwGhXpkLw/formResponse" target="hidden_iframe" onsubmit="submitted=true">
-			  <span class="form_desc"><u>Your name</u></span> <br /><input class="email_form" type="text" name="entry.141338849" id="entry.141338849" placeholder="Your name"> <br /><br />
-			  <span class="form_desc"><u>Your email</u></span> <br /><input class="email_form" type="email" name="entry.1503486752" id="entry.1503486752" placeholder="Your email"> <br /><br />
-			  <span class="form_desc"><u>Your message</u></span><br /> <textarea class="message_form" name="entry.1158196175" id="entry.1158196175" placeholder="Your message"></textarea> <br /><br />
-			  <input type="submit" value="Submit" class="submit_button">
-			</form>
-			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-		</div>
-		<br />
-		<br />
-		<span id="submit_success" class="success_message" style="display: none;">Your submission has been processed...</span>
-
-	</div>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script type="text/javascript">var submitted=false;</script>
-	<script type="text/javascript">
-		$('#gform').on('submit', function(e) {
-		
-		document.getElementById("entry.141338849").value= "";
-		document.getElementById("entry.1503486752").value= "";
-		document.getElementById("entry.1158196175").value= "";
-		
-		
-		$('#gform *').fadeOut(1000);
-		$('#submit_success').fadeIn(500);
-		$('#gform *').fadeIn(1000);
-		});
-	</script>
-    
-    <script>
-		document.getElementById("hint_button").addEventListener("click", function(){
-			document.getElementById("modal_help").showModal();
-		});
-		
-		document.getElementById("id_homepage").addEventListener("click", function(){
-			document.getElementById("homepage_container").style.display="block";
-			document.getElementById("portfolio_container").style.display="none";
-			document.getElementById("contact_container").style.display="none";
-		});
-		
-		document.getElementById("id_portfolio").addEventListener("click", function(){			
-			document.getElementById("homepage_container").style.display="none";
-			document.getElementById("portfolio_container").style.display="block";
-			document.getElementById("contact_container").style.display="none";
-		});
-		
-		document.getElementById("id_contact").addEventListener("click", function(){			
-			document.getElementById("homepage_container").style.display="none";
-			document.getElementById("portfolio_container").style.display="none";
-			document.getElementById("contact_container").style.display="block";
-			$('#gform *').fadeIn(200);
-			$('#submit_success').fadeOut(200);
-			
-		});
-    </script>
-</body>
-
-<footer>
-</footer>
+    <footer>
+    </footer>
 
 </html>
