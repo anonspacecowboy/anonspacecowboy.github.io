@@ -1,12 +1,9 @@
 div.wrapper{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    overflow: auto;
+    margin: 0px;
+    padding: 0px;
 }
 div.navbar{
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -66,59 +63,6 @@ div.content {
 
 }
 
-#start_button{
-	text-align: center;
-	line-height: 100px;
-	border-color: black;
-	border-style: solid;
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	font-weight: bold;
-	position: absolute;
-	z-index: 20;
-	left: 50%;
-	top: 50%;
-	margin-top: -50px;
-	margin-left: -50px;
-}
-
-#start_button:hover{
-	border-color: green;
-	color: green;
-	cursor: pointer;
-}
-
-#game_layer{
-	background-color: rgba(239,239,239,0.9);
-	margin-top: 50px;
-	z-index: 10;
-	width: 800px;
-	height: 600px;
-	position: relative;
-}
-
-div.game_container {
-}
-
-#hint_button{
-	text-align: center;
-	padding: 10px;
-	background-color: rgba(3, 114, 181,0.8);
-	width: 50px;
-	position: absolute;
-	top: 93%;
-	left: 1%;
-	border-radius: 5px;
-	font-weight: bold;
-
-}
-
-#hint_button:hover{
-	background-color: rgba(3, 114, 181,0.7);
-	cursor: pointer;
-
-}
 
 #homepage_container {
     margin-top: 100px;
@@ -126,6 +70,7 @@ div.game_container {
 }
 
 #portfolio_container {
+    margin: auto;
 	margin-top: 100px;
 	text-align: center;
 }
@@ -140,4 +85,61 @@ div.game_container {
     transform: scale(0.5);
     border-color: white;
     border-width: medium;
+}
+
+.portfolio_title{
+    color: #0372B5;
+    font-size: 160%;
+    text-decoration: underline;
+    border-bottom: solid #0372B5 1px;
+    padding-bottom: 30px;
+
+    padding-top: 40px;
+    font-weight: bold;
+
+}
+
+.portfolio_thumbnail img {
+    margin-top: 20px;
+}
+
+.portfolio_briefing {
+    border-top: solid #0372B5 1px;
+    padding: 10px;
+    margin-top: 30px;
+
+    font-size: 110%;
+}
+
+.post{
+    width: 60%;
+    margin: auto;
+    border: solid white 1px;
+    margin-bottom: 40px;
+}
+
+.post:hover{
+    opacity: 0.8;
+    border: solid black 1px;
+    border-radius: 10px;
+}
+
+.portfolio_pLink {
+    display: block;
+    font-size: 120%;
+    text-decoration: underline;
+    font-weight: 200;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: black;
+}
+
+.portfolio_pLink a{
+    color: #0372B5;
+}
+
+.portfolio_thumbnail img {
+    height: 250px;
+    width: 600px;
+    border: solid black 1px;
 }
