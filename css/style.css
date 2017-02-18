@@ -172,6 +172,33 @@ span.navbar_divisor {
 .post_info a:hover {
     text-decoration: underline;
 }
+.postpage_container {
+    margin: auto;
+    width: 60%;
+    margin-top: 80px;
+}
+.postpage_container h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.postpage_container p {
+    text-align: left;
+    font-size: 106%;
+    margin-top: -15px;
+}
+.postpage_container ul {
+    font-size: 104%;
+}
+.postpage_container img {
+    width: 50%;
+    height: 280px;
+    border-radius: 9px;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+.postpage_container img:nth-child(odd){
+    margin-right: 40px;
+}
 /* End Showcase page */
 
 
