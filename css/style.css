@@ -2,10 +2,17 @@
 .container {
     margin: auto;
 }
-
-body {
-    margin: 0px;
+html {
+    height: 100%;
+    box-sizing: border-box;
 }
+body {
+    position: relative;
+    margin: 0px;
+    min-height: 100%;
+}
+
+
 /* End General classes
 
 
@@ -98,6 +105,7 @@ span.navbar_divisor {
 .homepage {
     text-align: center;
     margin-top: 70px;
+    margin-bottom: 0px;
 }
 /* End Homepage */
 
@@ -205,7 +213,7 @@ span.navbar_divisor {
 /* Footer */
 .footer {
     color: #aaaaaa;
-    position: fixed;
+    position: absolute;;
     bottom: 0px;
     width: 100%;
 }
