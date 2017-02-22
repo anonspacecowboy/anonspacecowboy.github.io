@@ -1,22 +1,27 @@
 ---
 layout: post_layout
 title: USB-Serial logger
-meta: Log sampled datas from a USB(serial) sensor.
+meta: Data logger for the inercial sensor xSensMti-700
 category: intership
 img: boinha.jpg
 postDate: 2017-02-18
 ---
 
-The overall project consist in a autonomous small float that performs samples related to the equipament's motion and log these samples data in a file.
+This project aims to perform wave measures near the coast, approximately 3 meters deep, using a small surface floater(picture below).
 
-A script to convert raw samples is also included to the project.
+<center><img src="{{site.baseurl}}/img/boinha.jpg" /></center>
 
-In this project I worked on a serial interface to get and log equipament's samples, and on a convertion script to make raw sample data readable.
+To execute this wave samples the inercial we've used the sensor xSensMti and a ARM-Raspberry pi(save these samples on SD and perform data processing).
 
-* **Software/languages**: C(serial reader) and nodejs(script)
-* **Hardware**: Raspberry pi and xSens Mti sensor
-* [Github link](https://github.com/aracytopterm/USBSerial-logger)
-* **Status**: Under development
+<br />
+**What I did in this project?**<br />
+In this project I worked on a serial interface to get and log equipament's samples, and on a convertion script to make raw data readable.
+
+* **Software/languages**: C(serial reader) and nodejs(script);
+* **Hardware**: Raspberry pi and xSens Mti sensor;
+* **Github project link**: [Github link](https://github.com/aracytopterm/USBSerial-logger)
+* **Status**: Under development;
 
 __________________
-![Boinha]({{site.baseurl}}/img/boinha.jpg)
+
+<center><img src="{{site.baseurl}}/img/boinha2.jpg" /></center>

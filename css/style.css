@@ -184,6 +184,7 @@ span.navbar_divisor {
     margin: auto;
     width: 60%;
     margin-top: 80px;
+    margin-bottom: 100px;
 }
 .postpage_container h1{
     text-align: center;
@@ -201,10 +202,11 @@ span.navbar_divisor {
     width: 50%;
     height: 280px;
     border-radius: 9px;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     box-sizing: border-box;
 }
-.postpage_container img:nth-child(odd){
+.postpage_container .twin img:nth-child(odd){
     margin-right: 40px;
 }
 /* End Showcase page */
