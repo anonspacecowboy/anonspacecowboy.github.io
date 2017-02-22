@@ -11,6 +11,7 @@ This project aims to perform wave measures near the coast, approximately 3 meter
 
 <center><img src="{{site.baseurl}}/img/boinha.jpg" /></center>
 <br />
+<br />
 To execute this wave samples the inercial we've used the sensor xSensMti and a ARM-Raspberry pi(save these samples on SD and perform data processing).
 
 <br />
