@@ -9,7 +9,7 @@ postDate: 2017-02-18
 
 This project aims to perform wave measures near the coast, approximately 3 meters deep, using a small surface floater(picture below).
 
-<p><center><img src="{{site.baseurl}}/img/boinha.jpg" /></center></p>
+<center><img src="{{site.baseurl}}/img/boinha.jpg" /></center>
 
 To execute this wave samples the inercial we've used the sensor xSensMti and a ARM-Raspberry pi(save these samples on SD and perform data processing).
 
