@@ -4,7 +4,7 @@
     <div class="navbar_menu">
         <ul>
             <li><a class="{% if page.url == '/' %}current_page{% endif %}" href="{{site.baseurl}}/index.html">HOMEPAGE</a> <span class="navbar_divisor">--</span> </li>
-            <li><a class="{% if page.url == '/showcase_posts.html' %}current_page{% endif %}" href="{{site.baseurl}}/showcase_posts.html">PROJECTS</a> <span class="navbar_divisor">--</span> </li>
+            <li><a class="{% if page.title == 'Showcase' %}current_page{% endif %}" href="{{site.baseurl}}/showcase_posts.html">PROJECTS</a> <span class="navbar_divisor">--</span> </li>
             <li><a class="" href="https://github.com/aracytopterm?tab=repositories">PLAYGROUND</a> <span class="navbar_divisor">--</span> </li>
             <li><a class="{% if page.url == '/contact.html' %}current_page{% endif %}" href="{{site.baseurl}}/contact.html">CONTACT</a></li>
         </ul>
