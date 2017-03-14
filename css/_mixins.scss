@@ -1,0 +1,3 @@
+@mixin vertical_gradient($fromColor, $toColor) {
+    background-image: linear-gradient(to top, $fromColor, lighten($toColor, 45%));
+}
