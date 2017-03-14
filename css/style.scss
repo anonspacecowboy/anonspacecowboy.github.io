@@ -1,0 +1,59 @@
+@import "page-scheme";
+
+/* clearfix */
+.row:before,
+.row:after,
+.clear_float:before,
+.clear_float:after {
+	content: "";
+	display: table;
+}
+
+.clear_float:after {
+	clear: both;
+}
+/* End clearfix */
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    margin-top: $navbar_height;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $base_color;
+    height: $navbar_height;
+    .navbar_logo {
+        float: left;
+        padding: 15px;
+        padding: 0px 15px 0px 15px;
+        a {
+            text-decoration: none;
+            color: $font_color_nav;
+            font-weight: bold;
+        }
+    }
+
+    .navbar_menu {
+        float: right;
+        @extend .clear_float;
+        ul {
+            list-style: none;
+            padding: 5px 15px 5px 15px;
+
+        }
+        li{
+            display: inline;
+            padding: 2px 10px;
+        }
+        a {
+            text-decoration: none;
+            color: $font_color_nav;
+            font-weight: bold;
+        }
+    }
+}
