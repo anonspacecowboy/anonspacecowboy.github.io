@@ -82,6 +82,23 @@ body {
 }
 
 
+.footer {
+	position: absolute;
+	background-color: lighten($base_color, 45%);
+	bottom: 0px;
+	width: 100%;
+	padding: 5px 10px 5px 0px;
+	font-size: 95%;
+	box-sizing: border-box;
+	border-top: 1px solid darken(white, 30%);
+
+	.footer_cop{
+		text-align: right;
+		color: darken(white, 10%);
+	}
+}
+
+
 /* HOMEPAGE */
 #perf_img {
     border-radius: 50%;

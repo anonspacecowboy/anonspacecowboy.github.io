@@ -61,6 +61,19 @@ body {
   .navbar .navbar_divisor {
     color: #0372B5; }
 
+.footer {
+  position: absolute;
+  background-color: #a3a3a3;
+  bottom: 0px;
+  width: 100%;
+  padding: 5px 10px 5px 0px;
+  font-size: 95%;
+  box-sizing: border-box;
+  border-top: 1px solid #b3b3b3; }
+  .footer .footer_cop {
+    text-align: right;
+    color: #e6e6e6; }
+
 /* HOMEPAGE */
 #perf_img {
   border-radius: 50%;
