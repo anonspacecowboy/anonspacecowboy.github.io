@@ -2,15 +2,17 @@
 layout: showcase
 title: Showcase
 ---
-<div class="container post_wrapper">
+<div class="container posts_page">
     {% for post in site.categories.personal %}
     <div class="post">
         <div class="post_thumbnail">
             <img src="{{site.baseurl}}/img/{{post.img}}" />
         </div>
-        <span class="post_title"><a href="">{{post.title}}</a></span>
-        <p class="post_meta">{{post.meta}}</p>
-        <p class="post_info">{{post.category}} - ({{post.postDate}})</p>
+        <div class="post_excerpt">
+            <span class="post_title"><a href="">{{post.title}}</a></span>
+            <p class="post_info">{{post.category}} - ({{post.postDate}})</p>
+            <p class="post_meta">{{post.meta}}</p>
+        </div>
     </div>
     {% endfor %}
 </div>

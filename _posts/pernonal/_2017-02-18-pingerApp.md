@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: Get address information
-meta: Check if an address(hostname or ip) is alive and localize this ip on map.This is a study-project made to practice my nodejs-raw skills. In this project no framework was used, only standard node modules and a lite interface for geo-ip api. 
+meta: Check if an address(hostname or ip) is alive and localize this ip on map.This is a study-project made to practice my nodejs-raw skills. In this project no framework was used, only standard node modules and a lite interface for geo-ip api.
 category: personal
 img: ping1.png
 postDate: 2017-02-18

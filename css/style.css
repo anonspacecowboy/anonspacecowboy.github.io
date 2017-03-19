@@ -28,6 +28,7 @@ body {
   font-family: Helvetica, sans-serif; }
 
 .wrapper {
+  padding: 0px;
   padding-top: 60px;
   background-image: linear-gradient(to top, white, #a3a3a3); }
 
@@ -109,27 +110,32 @@ body {
   .category_menu a {
     font-weight: bold;
     padding: 2px 10px;
+    padding-top: 7px;
     color: white;
     text-decoration: none; }
   .category_menu a:hover {
-    text-decoration: overline; }
+    border-top: 3px solid white; }
 
 .posts_page {
   width: 80%;
   padding: 0px;
+  min-height: 100%;
   box-sizing: border-box;
-  background-color: #d6d6d6; }
+  background-color: lightgray; }
 
 .post {
   padding-top: 60px; }
   .post .post_thumbnail img {
-    width: 60%;
-    height: 280px; }
+    width: 55%;
+    height: 280px;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-sizing: border-box; }
   .post .post_excerpt {
     width: 60%;
     margin: auto;
     text-align: left;
-    border-bottom: 1px solid #c4c4c4; }
+    border-bottom: 1px solid #b0b0b0; }
     .post .post_excerpt .post_title {
       display: block;
       margin-top: 20px;
@@ -138,6 +144,8 @@ body {
       .post .post_excerpt .post_title a {
         text-decoration: none;
         color: #303030; }
+      .post .post_excerpt .post_title a:hover {
+        text-decoration: underline; }
     .post .post_excerpt .post_info {
       color: #a3a3a3;
       margin: 6px 0px 0px 0px; }
@@ -151,5 +159,43 @@ body {
   padding-bottom: 60px; }
 
 /* END PROJECTSPAGE */
+/* POSTTEXTPAGE */
+.post_text_page {
+  color: #303030;
+  margin-top: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 80%;
+  min-height: 100%;
+  box-sizing: border-box;
+  background-color: lightgray; }
+  .post_text_page .text_page_title {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 200%; }
+  .post_text_page .text {
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    text-align: left; }
+  .post_text_page .note {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic; }
+  .post_text_page .main_img img {
+    width: 65%;
+    height: 350px;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-sizing: border-box; }
+  .post_text_page ul {
+    margin: auto;
+    text-align: left;
+    width: 70%; }
+
+/* END POSTEXTPAGE */
 
 /*# sourceMappingURL=style.css.map */
