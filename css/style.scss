@@ -109,6 +109,13 @@ body {
 		text-align: right;
 		color: $footer_font_color;
 	}
+
+	.footer_description {
+		font-style: italic;
+		float:left;
+		text-align: left;
+		color: $footer_font_color;
+	}
 }
 
 

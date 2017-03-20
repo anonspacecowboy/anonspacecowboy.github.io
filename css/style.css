@@ -85,6 +85,11 @@ body {
   .footer .footer_cop {
     text-align: right;
     color: #e6e6e6; }
+  .footer .footer_description {
+    font-style: italic;
+    float: left;
+    text-align: left;
+    color: #e6e6e6; }
 
 /* HOMEPAGE */
 #perf_img {
