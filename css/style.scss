@@ -35,6 +35,11 @@ body {
 	padding: 0px;
 	padding-top: $navbar_height;
 	@include vertical_gradient($font_color_nav, $base_color);
+	@extend .clear_float;
+
+	@include md {
+		padding-top: 0px;
+	};
 }
 
 .container {
@@ -51,40 +56,85 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+	width: 100%;
     background-color: $base_color;
     height: $navbar_height;
+	@include md {
+		position:static;
+		width: 100%;
+		height: auto;
+	};
+
     .navbar_logo {
         float: left;
         padding: 15px;
         padding: 0px 15px 0px 15px;
+		@include md {
+			background-color: red;
+			display: block;
+			width: 100%;
+			float: none;
+			padding: 0px;
+			text-align: center;
+		};
+
         a {
             text-decoration: none;
             color: $font_color_nav;
             font-weight: bold;
         }
+
     }
 
     .navbar_menu {
         float: right;
         @extend .clear_float;
+
+		@include md {
+			background-color: blue;
+			display: block;
+			width: 100%;
+			float: none;
+		};
+
         ul {
             list-style: none;
             padding: 5px 15px 5px 15px;
+
+			@include md {
+				padding: 0px;
+				margin: 0px;
+			};
 
         }
         li{
             display: inline;
             padding: 2px 0px;
+
+			@include md {
+				padding: 0px;
+				display: block;
+				text-align: center;
+			};
         }
         a {
             text-decoration: none;
             color: $font_color_nav;
             font-weight: bold;
 			padding: 0px 10px;
+
+			@include md{
+				border-bottom: 3px solid lightblue;
+				padding: 0px;
+				display: block;
+			};
         }
 		a:hover {
 			border-bottom: 3px solid;
+
+			@include md {
+				background-color: lightblue;
+			};
 		}
 
     }
@@ -108,6 +158,12 @@ body {
 	.footer_cop{
 		text-align: right;
 		color: $footer_font_color;
+
+		@include md {
+			float: none;
+			display: block;
+			text-align: center;
+		}
 	}
 
 	.footer_description {
@@ -115,6 +171,12 @@ body {
 		float:left;
 		text-align: left;
 		color: $footer_font_color;
+
+		@include md {
+			float: none;
+			display: block;
+			text-align: center;
+		};
 	}
 }
 
@@ -123,6 +185,9 @@ body {
 #perf_img {
     border-radius: 50%;
     transform: scale(0.65);
+	@include md {
+		display: none;
+	};
     border-color: $font_color_nav;
     border-width: medium;
 }
@@ -139,6 +204,11 @@ body {
 .category_menu {
 	border-top: 1px solid $font_color_nav;
 	border-bottom: 1px solid $font_color_nav;
+	@extend .clear_float;
+
+	@include md{
+		display: none;
+	};
 
 	 ul {
 		 list-style: none;
@@ -165,6 +235,12 @@ body {
 	min-height: 100%;
 	box-sizing: border-box;
 	background-color: $posts_bakcground_color;
+	@extend .clear_float;
+
+	@include md {
+		width: 100%;
+	};
+
 }
 
 .post {
@@ -176,6 +252,11 @@ body {
 			border-radius: 20px;
 			border: 2px solid $font_color_nav;
 			box-sizing: border-box;
+
+			@include md {
+				height: 200px;
+				width: 80%;
+			};
 		}
 	}
 
@@ -184,6 +265,10 @@ body {
 		margin: auto;
 		text-align: left;
 		border-bottom: 1px solid $post_excerpt_color;
+
+		@include md {
+			width: 90%;
+		};
 		.post_title {
 			display: block;
 			margin-top: 20px;
