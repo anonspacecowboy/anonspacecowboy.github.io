@@ -214,15 +214,16 @@ body {
 
 /* POSTTEXTPAGE */
 .post_text_page {
+	min-height: 100%;
 	color: $base_color;
 	margin-top: 0px;
 	padding-top: 50px;
 	padding-bottom: 50px;
-
 	width: 80%;
-	min-height: 100%;
+
 	box-sizing: border-box;
 	background-color: lighten($base_color, 64%);
+
 
 	.text_page_title {
 		text-decoration: underline;
