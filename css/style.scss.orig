@@ -221,15 +221,22 @@ body {
 
 /* POSTTEXTPAGE */
 .post_text_page {
+	min-height: 100%;
 	color: $base_color;
 	margin-top: 0px;
 	padding-top: 50px;
 	padding-bottom: 50px;
+<<<<<<< HEAD
+	width: 80%;
+
+=======
 
 	width: $text_page_width;
 	min-height: 100%;
+>>>>>>> 3f218ecec64304504e92775098feb1e7645e7206
 	box-sizing: border-box;
 	background-color: $posts_bakcground_color;
+
 
 	.text_page_title {
 		text-decoration: underline;

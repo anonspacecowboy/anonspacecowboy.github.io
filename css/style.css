@@ -85,6 +85,11 @@ body {
   .footer .footer_cop {
     text-align: right;
     color: #e6e6e6; }
+  .footer .footer_description {
+    font-style: italic;
+    float: left;
+    text-align: left;
+    color: #e6e6e6; }
 
 /* HOMEPAGE */
 #perf_img {
@@ -161,12 +166,12 @@ body {
 /* END PROJECTSPAGE */
 /* POSTTEXTPAGE */
 .post_text_page {
-  min-height: 100%;
   color: #303030;
   margin-top: 0px;
   padding-top: 50px;
   padding-bottom: 50px;
   width: 80%;
+  min-height: 100%;
   box-sizing: border-box;
   background-color: lightgray; }
   .post_text_page .text_page_title {
