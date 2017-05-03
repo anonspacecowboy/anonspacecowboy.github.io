@@ -35,11 +35,6 @@ body {
 	padding: 0px;
 	padding-top: $navbar_height;
 	@include vertical_gradient($font_color_nav, $base_color);
-	@extend .clear_float;
-
-	@include md {
-		padding-top: 0px;
-	};
 }
 
 .container {
@@ -56,94 +51,40 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-	width: 100%;
+    right: 0;
     background-color: $base_color;
     height: $navbar_height;
-	@include md {
-		position:static;
-		width: 100%;
-		height: auto;
-	};
-
     .navbar_logo {
         float: left;
         padding: 15px;
         padding: 0px 15px 0px 15px;
-		@include md {
-			background-color: $base_color;
-			float: left;
-			padding: 0px;
-			padding-left: 10px;
-			text-align: center;
-			//border-bottom: 1px solid $font_color_nav;
-		};
-
         a {
             text-decoration: none;
             color: $font_color_nav;
             font-weight: bold;
         }
-
     }
 
     .navbar_menu {
         float: right;
         @extend .clear_float;
-
-
-		@include md {
-			position: absolute;
-			top:$navbar_height;
-			left: 0px;
-			z-index: 1;
-			background-color: $base_color;
-			width: 100%;
-			float: none;
-			display: none;
-		};
-
         ul {
             list-style: none;
-			margin: 0px;
-			margin-right: 10px;
-			@include md {
-				padding: 0px;
-				margin: 0px;
-			};
+            padding: 5px 15px 5px 15px;
 
         }
         li{
             display: inline;
-			@include md {
-				padding: 0px;
-				display: block;
-				text-align: center;
-			};
+            padding: 2px 0px;
         }
         a {
             text-decoration: none;
             color: $font_color_nav;
             font-weight: bold;
-			margin: 0px;
-			padding: 20px 10px;
-			box-sizing: border-box;
-			display: inline-block;
-			height: 100%;
-
-			@include md{
-				border-bottom: 1px solid $font_color_nav;
-				padding: 0px;
-				display: block;
-				padding:8px;
-			};
+			padding: 0px 10px;
         }
 		a:hover {
-			border-bottom: 6px solid;
-
-			@include md {
-				border-bottom: 2px solid $font_color_nav;
-				background-color: $footer_border_color;
-			};
+			border-bottom: 3px solid;
 		}
 
     }
@@ -152,48 +93,6 @@ body {
 		color: $aux_color;
 	}
 }
-
-
-/* TOGGLE MENU */
-#toggle-menu {
-	display:none;
-}
-@include md {
-	#toggle-menu {
-	  	display: block;
-		float: right;
-	  	width: 28px;
-	  	height: 30px;
-	  	margin-top: 25px;
-		padding-right: 8px;
-
-	}
-
-	#toggle-menu span:after,
-	#toggle-menu span:before {
-	  	content: "";
-	  	position: absolute;
-	  	left: 0;
-	  	top: -9px;
-	}
-	#toggle-menu span:after{
-	  	top: 9px;
-	}
-	#toggle-menu span {
-	  	position: relative;
-	  	display: block;
-	}
-
-	#toggle-menu span,
-	#toggle-menu span:after,
-	#toggle-menu span:before {
-	  	width: 100%;
-	  	height: 5px;
-	  	background-color: $footer_color;
-	  	border-radius: 2px;
-	}
-};
-/* END TOGGLE MENU */
 
 
 .footer {
@@ -209,12 +108,6 @@ body {
 	.footer_cop{
 		text-align: right;
 		color: $footer_font_color;
-
-		@include md {
-			float: none;
-			display: block;
-			text-align: center;
-		}
 	}
 
 	.footer_description {
@@ -222,12 +115,6 @@ body {
 		float:left;
 		text-align: left;
 		color: $footer_font_color;
-
-		@include md {
-			float: none;
-			display: block;
-			text-align: center;
-		};
 	}
 }
 
@@ -236,9 +123,6 @@ body {
 #perf_img {
     border-radius: 50%;
     transform: scale(0.65);
-	@include md {
-		width: 70%;
-	};
     border-color: $font_color_nav;
     border-width: medium;
 }
@@ -247,9 +131,6 @@ body {
 /* CONTACTPAGE */
 .contactpage {
 	padding-top: 150px;
-	@include md {
-		padding-top: 50px;
-	};
 
 }
 /* END CONTACTPAGE */
@@ -258,11 +139,6 @@ body {
 .category_menu {
 	border-top: 1px solid $font_color_nav;
 	border-bottom: 1px solid $font_color_nav;
-	@extend .clear_float;
-
-	@include md{
-		display: none;
-	};
 
 	 ul {
 		 list-style: none;
@@ -289,17 +165,10 @@ body {
 	min-height: 100%;
 	box-sizing: border-box;
 	background-color: $posts_bakcground_color;
-	@extend .clear_float;
-
-	@include md {
-		width: 100%;
-	};
-
 }
 
 .post {
 	padding-top: 60px;
-
 	.post_thumbnail {
 		img {
 			width: $post_img_width;
@@ -307,11 +176,6 @@ body {
 			border-radius: 20px;
 			border: 2px solid $font_color_nav;
 			box-sizing: border-box;
-
-			@include md {
-				height: 200px;
-				width: 80%;
-			};
 		}
 	}
 
@@ -320,10 +184,6 @@ body {
 		margin: auto;
 		text-align: left;
 		border-bottom: 1px solid $post_excerpt_color;
-
-		@include md {
-			width: 90%;
-		};
 		.post_title {
 			display: block;
 			margin-top: 20px;
@@ -361,27 +221,27 @@ body {
 
 /* POSTTEXTPAGE */
 .post_text_page {
+	min-height: 100%;
 	color: $base_color;
 	margin-top: 0px;
 	padding-top: 50px;
 	padding-bottom: 50px;
+<<<<<<< HEAD
+	width: 80%;
+
+=======
 
 	width: $text_page_width;
 	min-height: 100%;
+>>>>>>> 3f218ecec64304504e92775098feb1e7645e7206
 	box-sizing: border-box;
 	background-color: $posts_bakcground_color;
 
-	@include md {
-		width: 100%;
-	};
 
 	.text_page_title {
 		text-decoration: underline;
 		font-weight: bold;
 		font-size: 200%;
-		@include md {
-			font-size: 150%;
-		};
 	}
 
 	.text {
@@ -391,9 +251,6 @@ body {
 		margin-top: 35px;
 		margin-bottom: 20px;
 		text-align: left;
-		@include md {
-			width: $text_page_textarea_md;
-		};
 
 	}
 
@@ -402,9 +259,6 @@ body {
 		margin-bottom: 20px;
 		text-align: center;
 		font-style: italic;
-		@include md {
-			margin: 35px 10px 20px 10px;
-		};
 	}
 
 	.main_img {
@@ -414,10 +268,6 @@ body {
 			border-radius: 10px;
 			border: 2px solid $font_color_nav;
 			box-sizing: border-box;
-			@include md {
-				width: $text_page_img_width;
-				height: $text_page_img_height_md;
-			};
 		}
 	}
 
