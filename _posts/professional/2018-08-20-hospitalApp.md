@@ -4,7 +4,7 @@ title: Hospital clients manager
 meta: This webapp focused in managing hospital history, in order to make a average medical appointment a lot quicker.
 category: professional
 img: hospital-clients-manager.png
-postDate: 2017-02-18
+postDate: 2017-08-20
 ---
 
 **The Project**
