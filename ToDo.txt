@@ -1,3 +1,5 @@
-//TODO: Adjust/update Hospital clients manager project page
+//TODO: change project layouts to tiles
 //TODO: List projects to add
-//TODO: Add other projects
+//TODO: Add medical website project
+//TODO: Add provedor da barra website project
+
