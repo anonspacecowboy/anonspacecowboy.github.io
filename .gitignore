@@ -2,3 +2,4 @@ _site
 css/.sass-cache
 style.css.map
 .tern-project
+.jekyll-cache
