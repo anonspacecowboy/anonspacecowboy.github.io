@@ -3,18 +3,20 @@ layout: showcase
 title: Showcase
 ---
 <div class="posts_page container">
-        {% for post in site.posts %}
-        <div class="post">
-            <div class="post_thumbnail">
-                <img class="post_thumbnail_img" src="{{site.baseurl}}/img/{{post.img}}" />
+    {% for post in site.posts %}
+    <div class="posts">
+        <div class="posts_post">
+            <div class="posts_post-thumbnail">
+                <img class="" src="{{site.baseurl}}/img/{{post.img}}" />
             </div>
-            <div class="post_excerpt">
-                <span class="post_title"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></span>
-                <p class="post_info"><a href="{{site.baseurl}}/showcase_{{post.category}}.html">{{post.category}}</a> - ({{post.postDate}})</p>
-                <p class="post_meta">{{post.meta}}</p>
+            <div class="posts_post-excerpt">
+                <span class="posts_post-title"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></span>
+                <p class="posts_post-info"><a href="{{site.baseurl}}/showcase_{{post.category}}.html">{{post.category}}</a> - ({{post.postDate}})</p>
+                <p class="posts_post-meta">{{post.meta}}</p>
 
             </div>
         </div>
-
-        {% endfor %}
-</div>
+   {% endfor %}
+    </div>
+    aaaaaaaaaaaaaaaaaa
+ </div>

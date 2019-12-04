@@ -245,44 +245,22 @@ body {
     .posts_page {
       width: 100%; } }
 
-.post {
-  padding-top: 60px; }
-  .post .post_thumbnail img {
-    width: 55%;
-    height: 280px;
-    border-radius: 20px;
-    border: 2px solid white;
+.posts {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  background-color: yellow;
+  padding: 0 30px; }
+  .posts .posts_post {
+    background-color: pink;
+    width: 500px;
+    height: 500px;
     box-sizing: border-box; }
-    @media only screen and (max-width: 780px) {
-      .post .post_thumbnail img {
-        height: 200px;
-        width: 80%; } }
-  .post .post_excerpt {
-    width: 60%;
-    margin: auto;
-    text-align: left;
-    border-bottom: 1px solid #b0b0b0; }
-    @media only screen and (max-width: 780px) {
-      .post .post_excerpt {
-        width: 90%; } }
-    .post .post_excerpt .post_title {
-      display: block;
-      margin-top: 20px;
-      font-size: 135%;
-      font-weight: bold; }
-      .post .post_excerpt .post_title a {
-        text-decoration: none;
-        color: #303030; }
-      .post .post_excerpt .post_title a:hover {
-        text-decoration: underline; }
-    .post .post_excerpt .post_info {
-      color: #a3a3a3;
-      margin: 6px 0px 0px 0px; }
-      .post .post_excerpt .post_info a {
-        color: #a3a3a3; }
-    .post .post_excerpt .post_meta {
-      color: #303030;
-      margin: 10px 0px 30px 10px; }
+  .posts .posts_post-thumbnail img {
+    width: 500px;
+    height: 350px;
+    text-align: center; }
 
 .post:last-child {
   padding-bottom: 60px; }
