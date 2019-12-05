@@ -303,40 +303,60 @@ body {
 }
 
 .posts {
-    width: 1000px;
+    width: 800px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
-    background-color: yellow;
     padding: 0 30px;
 
     .posts_post {
-        background-color: pink;
-        width: 500px;
-        height: 500px;
+        width: 400px;
+        height: 400px;
         box-sizing: border-box;
+        border: 1px solid lightgray;
+        background-color: $post_excerpt_color;
     }
 
     .posts_post-thumbnail {
         img {
-            width: 500px;
-            height: 350px;
+            width: 100%;
+            height: 250px;
             text-align: center;
+            box-sizing: border-box;
         }
     }
 
     .posts_post-title {
+        a {
+            color: $footer_font_color;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
     }
 
     .posts_post-info {
+        font-size: .8rem;
+        color: gray;
+        margin-top: -1px;
+        a {
+            color: gray;
+        }
     }
 
-    .posts_post-excerpt {    
+    .posts_post-excerpt {
+        margin-top: 10px;    
     }
 
     .posts_post-meta {
+        text-align: center;
+        font-size: 1rem;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        color: $base_color;
     }
 }
+
 
 .post:last-child{
 	padding-bottom: 60px;
