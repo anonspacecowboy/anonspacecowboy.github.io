@@ -1,20 +1,13 @@
-<html>
+{% include header.html %}
 
-{% include head.html %}
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% include post-content.html %}
+                </div>
+            </div>
+        </div>
+    </main>
 
-<body>
-<div class="wrapper">
-<!-- navbar begin -->
-{% include navbar.html %}
-<!-- navbar end-->
-
-<!-- homepage container begin-->
-    {{content}}
-</div>
 {% include footer.html %}
-
-</body>
-
-
-
-</html>

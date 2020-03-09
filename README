@@ -1,8 +1,0 @@
-## To install jekyll gem
-    `gem install bundler jekyll`
-
-## To run this set up locally
-    `jekyll serve --baseurl ""`
-
-## To run sass
-    `sass --watch input.scss:output.css`

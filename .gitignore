@@ -1,5 +1,7 @@
+*.gem
+.bundle
+.sass-cache
 _site
-css/.sass-cache
-style.css.map
-.tern-project
-.jekyll-cache
+Gemfile.lock
+*.swp
+*.swo
