@@ -80,7 +80,7 @@ img {
 
 button.btn, input.btn {
   padding: 12px 35px;
-  margin: 2em 0.5em;
+  margin: 0em 0.5em;
   border: solid 1px #d5e0e7;
   border-radius: 4px;
   color: $btn-font-color;
@@ -114,13 +114,14 @@ button.btn, input.btn {
 
 .section-jump {
   position: relative;
-  top: 0;
+  top: -50px;
+  font-size: 2rem;
   color: #C8D7E1;
   margin: 0 auto;
   display: table;
   @include transition(top .2s ease-in);
   &:hover {
-    top: 3px;
+    top: -43px;
   }
 }
 
