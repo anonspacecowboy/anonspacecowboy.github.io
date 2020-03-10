@@ -14,8 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: "Hello. I am Aracy"
+subtitles: 
+    - "Hallo. Ich bin Aracy"
+    - "Olá. Eu sou Aracy"
+    - "Hola. Yo soy Aracy"
+
 email: 'aracyladev@gmail.com'
-description: "a general software develper from Brazil/RJ creating use(ful/less) things"
+description: "general software develper from Brazil/RJ creating use[ful/less] things"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://github.com/aracyla" # the base hostname & protocol for your site, e.g. https://example.com
 twitter_username: ''
