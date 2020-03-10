@@ -31,6 +31,8 @@ $btn-font-color:			$bg-content-color;
 
 %opensans { font-family: 'Open Sans', sans-serif; }
 %merriweather { font-family: 'Merriweather', serif; }
+%inconsolata { font-family: 'Inconsolata', monospace;}
+
 
 /*--------------------------------------------------------------
 	1.0 Defaults
@@ -44,12 +46,12 @@ $btn-font-color:			$bg-content-color;
 
 body {
   background-color: $bg-color;
-  @extend %opensans;
+  @extend %inconsolata;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @extend %merriweather;
+  @extend %inconsolata;
   font-weight: 700;
 }
 
