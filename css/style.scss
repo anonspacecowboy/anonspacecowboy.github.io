@@ -105,8 +105,8 @@ button.btn, input.btn {
 
 .main {
   background-color: $bg-content-color;
-  border-left: solid 1px #cedfea;
-  border-right: solid 1px #cedfea;
+  border-left: solid 1px $navbar-bg-color;
+  border-right: solid 1px $navbar-bg-color;
   &.container {
     padding: 0;
   }
@@ -163,6 +163,13 @@ button.btn, input.btn {
     i {
       padding-right: 0.5em;
     }
+  }
+  &__terminal-cursor {
+	background-color: $font-color;
+	animation-duration: 3s;
+  }
+  &__icon {
+	font-size: 24rem;
   }
 }
 

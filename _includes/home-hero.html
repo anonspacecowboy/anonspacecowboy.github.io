@@ -9,11 +9,18 @@
         <div class="hero-content">
 
           {% if site.title != '' %}
-          <h1 class="text-center">{{site.title}}</h1>
+		  <h1 class="text-center">{{site.title}} <span class="animated infinite flash hero-content__terminal-cursor">.</span></h1>
           {% endif %}
 
           {% if site.description != '' or site.enable_contact == true %}
           <p class="text-center">
+			{% for subtitle in site.subtitles %}
+			{{subtitle}} <br />
+			{% endfor %}
+			<br />
+			<i class="fa fa-random hero-content__icon"></i>
+			<br />
+			<br />
             {% if site.description != '' %}
             {{site.description}}
             {% endif %}
