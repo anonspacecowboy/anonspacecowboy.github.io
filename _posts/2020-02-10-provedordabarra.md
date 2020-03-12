@@ -2,7 +2,7 @@
 layout: inner
 position: left
 title: 'Provedor da Barra'
-date: 2020-02-30 16:00:00
+date: 2020-02-10 16:00:00
 categories: web development
 tags: JavaScript Jekyll SCSS
 featured_image: '/img/posts/02_weathercast-1130x864-2x.png'
