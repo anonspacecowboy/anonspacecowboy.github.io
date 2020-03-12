@@ -297,6 +297,7 @@ button.btn, input.btn {
     h3.title {
       position: relative;
       margin-bottom: 1.5em;
+	  color: $font-color;
       &:after {
         content: '';
         position: absolute;
@@ -309,6 +310,7 @@ button.btn, input.btn {
     }
     .excerpt {
       width: 80%;
+	  color: $font-color;
       @include bp-xsmall {
         width: 100%;
       }
@@ -322,7 +324,7 @@ button.btn, input.btn {
     .tags, .categories {
       margin: 2em 0;
       span {
-        color: #9eb1bd;
+		color: $btn-font-color;
         background-color: #ECEFF1;
         padding: 0.5em 1.5em;
         display: inline-block;
