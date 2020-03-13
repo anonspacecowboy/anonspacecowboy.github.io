@@ -352,20 +352,35 @@ button.btn, input.btn {
   p {
     font-size: 12px;
     font-weight: 600;
-    color: #9eb1bd;
     margin: 0;
     padding: 10px 0;
+	a {
+		color: $aux-color;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
     @include bp-xsmall {
       text-align: center;
     }
   }
   .section-jump {
     float: right;
+	margin-top: -20px;
     @include bp-xsmall {
       float: none;
     }
   }
 }
+
+.secondary-link {
+	color: $font-color!important;
+}
+.secondary-link:hover {
+	text-decoration: underline;
+}
+
+
 
 /*--------------------------------------------------------------
 	5.0 Code formatting
