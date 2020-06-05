@@ -501,6 +501,7 @@ pre {
 		font-size: 1.7rem;
 		color: $font-color;
 		font-weight: 400;
+		background-color: $navbar-bg-color;
 		& a:hover {
 			color: white!important;
 		}
@@ -517,4 +518,3 @@ pre {
 		color: white;
 	}
 }
-
