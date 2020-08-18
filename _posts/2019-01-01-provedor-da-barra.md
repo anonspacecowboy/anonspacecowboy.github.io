@@ -9,5 +9,6 @@ featured_image: '/img/posts/01_provedorbarra-1130x864.png'
 project_link: https://provedordabarra.com/
 button_icon: 'internet-explorer'
 button_text: 'Visit Website'
+class: 'post-left'
 lead_text: 'Website developed for a Brazilian internet provider.'
 ---

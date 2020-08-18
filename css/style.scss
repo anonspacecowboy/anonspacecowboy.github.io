@@ -342,14 +342,20 @@ button.btn, input.btn {
 }
 
 .post-img {
-	margin-left: -50px;
 	margin-top: 45px;
 	object-fit: fill;
 	height: 350px;
-	-webkit-box-shadow: -0px 0px 25px 0px $btn-bg-color;
-	-moz-box-shadow: -0px 0px 25px 0px $btn-bg-color;
-	box-shadow: -0px 0px 25px 0px $btn-bg-color;
-	border-radius: 5px;
+	width: 100%;
+	-webkit-box-shadow: -0px 0px 10px 0px $btn-bg-color;
+	-moz-box-shadow: -0px 0px 10px 0px $btn-bg-color;
+	box-shadow: -0px 0px 10px 0px $btn-bg-color;
+	border-radius: 1px;
+}
+.post-left {
+	margin-left: -50px;
+}
+.post-right {
+	margin-left: 40px;
 }
 
 /*--------------------------------------------------------------
