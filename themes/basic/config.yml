@@ -1,0 +1,3 @@
+autoprefixer:
+    exclude:
+        - '*.min.css'
