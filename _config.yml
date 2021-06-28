@@ -1,12 +1,12 @@
 # Site
 title: Aracyladev
-favicon: '/images/favicon.ico'
 subtitle: 'sub'
 description: 'desc'
 keywords:
 author: aracyla
 language: en
 timezone: ''
+favicon_credit: 'https://www.elegantthemes.com/'
 
 # Routes
 url: https://aracyla.github.io
