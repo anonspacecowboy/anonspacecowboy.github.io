@@ -1,0 +1,9 @@
+left_menu:
+    - 'Home'
+    - 'DevNotes'
+    - '!NotDevNotes'
+    - 'Projects'
+
+right_menu:
+    - 'Github'
+    - 'Mail'
