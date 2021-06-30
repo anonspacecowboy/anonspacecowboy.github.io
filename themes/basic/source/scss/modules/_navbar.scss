@@ -1,30 +1,34 @@
 .navbar {
     background-color: $main-black;
     color: $navbar-font-color;
+    font-size: $navbar-font-size;
     height: $navbar-height;
     line-height: $navbar-height;
-    font-size: $navbar-font-size;
 
     &__menu {
-        max-width: 1300px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: .3fr 1fr;
+        @include for-desktop {
+            max-width: 1400px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: .4fr 1fr;
+        }
     }
 
     &__logo {
+        padding-left: 20px;
         padding-right: 20px;
         transition: color .3s ease;
         font-family: 'logo-font';
         font-size: $navbar-logo-font-size;
         text-align: left;
 
+
         & span {
             font-family: 'logo-font';
         }
 
         &:hover {
-            cursor: pointer;
+            @include is-link;
             color: #999;
         }
 
@@ -39,21 +43,47 @@
         &--tilde {
             color: $main-blue;
         }
-    }
 
-    &__menu-items {
-        text-align: right;
-        li {
-            display: inline-block;
+        @include for-desktop {
+            padding-top: 2px;
         }
     }
 
-    &__item {
-        padding: 0 10px;
-        transition: color .3s ease;
-        &:hover {
-            cursor: pointer;
-            color: white;
+    &__menu-items {
+        width: 100%;
+        position: absolute;
+        top: $navbar-height;
+        z-index: 10;
+
+        li {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 0px 0;
+            background-color: white;
+            border-bottom: 1px solid $main-blue;
+            transition: color .3s ease;
+            &:hover {
+                @include is-link;
+                color: white;
+            }
+        }
+
+        @include for-desktop {
+            text-align: right;
+            position: static;
+            width: auto;
+
+            li {
+                display: inline-block;
+                width: auto;
+                padding: 0 10px;
+                max-height: $navbar-height;
+                background-color: $main-black;
+                &:last-child {
+                    padding-right: 20px;
+                }
+            }
         }
     }
 }
