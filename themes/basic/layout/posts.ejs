@@ -1,0 +1,3 @@
+<% site.categories.findOne({name: page.path.replace(/\.html/g, '').replace(/\-/g, '').substring(1)}).posts.sort('title', 1).each(function(post) {%>
+    <%= post.title %>
+<% })%>

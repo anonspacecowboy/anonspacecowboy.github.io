@@ -1,9 +1,6 @@
-.index-content {
-    max-width: $max-content-width;
-    margin: auto;
-    color: $text-font-color;
-    background-color: $content-bg;
-    height: 100%;
+.index {
+    height: calc(100% - 60px);
+    overflow: hidden;
     position: relative;
 
     & h1 {

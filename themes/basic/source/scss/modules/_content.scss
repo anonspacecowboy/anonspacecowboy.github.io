@@ -1,0 +1,7 @@
+.content {
+    max-width: $max-content-width;
+    min-height: calc(100% - 60px);
+    margin: auto;
+    color: $text-font-color;
+    background-color: $content-bg;
+}
