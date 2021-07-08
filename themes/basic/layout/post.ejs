@@ -1,1 +1,11 @@
-foifoi
+<div class="post">
+    <div class="post__title">
+        <%= page.title %>
+    </div>
+    <div class="post__date">
+        <%- date(page.date, 'YYYY MMMM DD') %>
+    </div>
+    <div class="post__content">
+        <%- render(page.content) %>
+    </div>
+</div>

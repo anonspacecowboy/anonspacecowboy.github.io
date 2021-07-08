@@ -8,10 +8,13 @@ $max-content-width: 1200px;
 //navbar defs
 $navbar-font-color: #777;
 $navbar-height: 60px;
-$navbar-font-size: 1.2rem;
+$navbar-font-size: 1rem;
 $navbar-logo-font-size: 1.3rem;
 @font-face {
     font-family: 'logo-font';
     src: url('./../../fonts/logo-font.ttf');
 }
 
+//post defs
+$post-page-title-font-size: 2rem;
+$post-page-desc-font-size: 1.1rem;

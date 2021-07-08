@@ -1,3 +1,40 @@
-<% site.categories.findOne({name: page.path.replace(/\.html/g, '').replace(/\-/g, '').substring(1)}).posts.sort('title', 1).each(function(post) {%>
-    <%= post.title %>
-<% })%>
+<div class="posts">
+    <% if(page.path.replace(/.html/g, '').replace(/[\/\-]/g, '') === 'devnotes') { %>
+        <div class="posts__title">
+            DevNotes
+        </div>
+        <div class="posts__page-desc">
+            <p>Useless records of what I have been up to regarding software/hardware development.</p>
+            <p>Currently focusing on Javascript/Typescript related projects</p>
+            <p>:)</p>
+        </div>
+    <% } else { %>
+        <div class="posts__title">
+            NotDevNotes
+        </div>
+        <div class="posts__page-desc">
+            <p>All usefull things outside the programming world that (I enjoy/I'm trying learn)</p>
+            <p>Currently: sailing lessons, plants, basic house maintenance</p>
+            <p>:)(:</p>
+        </div>
+    <% } %>
+    
+
+    <div class="posts__grid">
+        <% site.categories.findOne({name: page.path.replace(/\.html/g, '').replace(/\-/g, '').substring(1)}).posts.sort('title', 1).each(function(post) {%>
+            <div class="posts__post-card">
+                <a href="<%- url_for(post.permalink) %>">
+                    <div class="posts__post-card-title">
+                        <%= post.title %>
+                    </div>
+                    <div class="posts__post-card-date">
+                        <%- date(post.date, 'YYYY MMMM DD') %>
+                    </div>
+                    <div class="posts__post-card-excerpt">
+                        <%= post.excerpt %>
+                    </div>
+                </a>
+            </div>
+        <% })%>
+    </div>
+</div>

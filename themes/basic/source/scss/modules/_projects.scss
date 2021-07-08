@@ -1,0 +1,45 @@
+.projects {
+    padding: 0 50px;
+    &__title {
+        font-size: $post-page-title-font-size;
+        font-weight: 100;
+        padding-top: 40px;
+        margin-bottom: 20px;
+        font-family: 'logo-font';
+    }
+
+    &__page-desc {
+        font-size: $post-page-desc-font-size;
+        line-height: 1.9rem;
+        margin-bottom: 30px;
+    }
+
+    &__posts {
+    }
+
+    &__entry {
+        display: inline-block;
+        width: 70%;
+        margin-bottom: 40px;
+        border-bottom: 1px solid $main-gray;
+        &:nth-child(even) {
+            margin-left: 30%;
+            text-align: right;
+        }
+    }
+
+    &__entry-title {
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    &__entry-desc {
+        margin-bottom: 20px;
+    }
+
+    &__entry-link {
+        color: $main-blue;
+        margin-bottom: 20px;
+    }
+}
