@@ -1,15 +1,21 @@
 <div class="navbar">
     <div class="navbar__menu">
-        <div class="navbar__logo">
-            <span class="navbar__logo--at">@</span><span class="navbar__logo--txt">ARACYLA</span> <span class="navbar__logo--tilde">~</span>/HOME/
-        </div>
+        <a href="/">
+            <div class="navbar__logo">
+                <span class="navbar__logo--at">@</span><span class="navbar__logo--txt">ARACYLA</span> <span class="navbar__logo--tilde">~</span>/HOME/
+            </div>
+        </a>
         <div class="burger">
             <div class="burger__icon">
             </div>
         </div>
         <ul class="navbar__menu-items">
             <% for(let item of theme.menu) {%>
-                <li><%= item %></li>
+                <% if(item.action.includes('/')) { %>
+                    <li><%- link_to(item.action, item.text) %></li>
+                <% } else {%>
+                    <li><%- mail_to(item.action, item.text) %></li>
+                <% } %>
             <% } %>
         </ul>
     </div>

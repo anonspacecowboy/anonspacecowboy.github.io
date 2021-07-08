@@ -2,8 +2,18 @@
 # https://www.instagram.com/kamalazzahra/
 # favicon_credit: 'https://www.elegantthemes.com/'
 menu:
-    - 'DevNotes'
-    - '!NotDevNotes'
-    - 'Projects'
-    - 'Github'
-    - 'Mail'
+    - 
+      text: 'DevNotes'
+      action: '/dev-notes'
+    - 
+      text: '!NotDevNotes'
+      action: '/not-dev-notes'
+    - 
+      text: 'Projects'
+      action: '/projects'
+    - 
+      text: 'Github'
+      action: 'https://github.com/aracyla'
+    - 
+      text: 'E-Mail'
+      action: 'wrongemail@gmail.com'

@@ -1,0 +1,31 @@
+# Site
+title: Aracyladev
+subtitle: 'sub'
+description: 'desc'
+keywords:
+author: aracyla
+language: en
+timezone: ''
+
+# Routes
+url: localhost:4000/
+root: /
+
+# Theming
+theme: basic
+
+# Plugins
+browsersync:
+    logLevel: "warn"
+    ghostMode:
+        scroll: true
+    instanceName: "uniqueString"
+
+node_sass:
+    sourceComments: false
+    outputStyle: 'compressed'
+    debug: true
+
+autoprefixer:
+    exclude:
+        - '*.min.css'
