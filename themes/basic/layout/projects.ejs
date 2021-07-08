@@ -1,0 +1,23 @@
+<div class="projects">
+    <div class="projects__title">
+        <%= page.title %>
+    </div>
+    <div class="projects__page-desc">
+        <p>List of projects that I have been part of(Or still working)</p>
+    </div>
+    <div class="projects__posts">
+        <% site.posts.filter(x=> x.layout === 'projects').each(function(post) { %>
+            <div class="projects__entry">
+                <div class="projects__entry-title">
+                    <%=post.title %>
+                </div>
+                <div class="projects__entry-desc">
+                    <%=post.description %> 
+                </div>
+                <div class="projects__entry-link">
+                    <%=post.link %>
+                </div>
+            </div>
+        <% }) %> 
+    </div>
+</div>

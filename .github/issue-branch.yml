@@ -6,6 +6,4 @@ branches:
   - label: feature
     prefix: feature/
   - label: bug
-    prefix: bugfix/
-  - label: '*'
-    prefix: issues/
+    prefix: fix/

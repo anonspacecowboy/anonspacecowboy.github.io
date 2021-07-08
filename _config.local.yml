@@ -8,7 +8,7 @@ language: en
 timezone: ''
 
 # Routes
-url: https://aracyla.github.io
+url: localhost:4000/
 root: /
 
 # Theming
