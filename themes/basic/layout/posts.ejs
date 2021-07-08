@@ -21,7 +21,7 @@
     
 
     <div class="posts__grid">
-        <% site.categories.findOne({name: page.path.replace(/\.html/g, '').replace(/\-/g, '').substring(1)}).posts.sort('title', 1).each(function(post) {%>
+        <% site.categories.findOne({name: page.path.replace(/\.html/g, '').replace(/\-/g, '').substring(1)})?.posts.sort('title', 1).each(function(post) {%>
             <div class="posts__post-card">
                 <a href="<%- url_for(post.permalink) %>">
                     <div class="posts__post-card-title">
